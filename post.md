@@ -8,7 +8,7 @@ For our [5th Hackday event][5th hackday post], we decided to tackle the problem 
 
 ## Targets
 
-![Logos](tech-cloud.svg)
+![Logos](tech-cloud.png)
 
 The theme of the latest hackday was trying out various backend as a service products. We've decided to take it to the extreme and set ourselves the goal of not setting up any backend servers, focusing on using 3rd party products and minimal glue code.
 
@@ -26,7 +26,7 @@ First off, the user has to sign in using our Google domain and obtain a Parse se
 
 Auth0 provided both a widget for logging users in - [Auth0 Lock][], as well as the ability to write [custom rules][auth0 rules] in javascript, which let us obtain a Parse session token as a part of the authentication flow.
 
-![Authentication flow](auth-flow.svg)
+![Authentication flow](auth-flow.png)
 
 Once the user is in, he can view the latest links gathered by our backend services. The whole link extraction flow was built around Zapier, as it enabled us to easily create hooks that pulled data from our Slack and Google group and sent it to Parse. On the Parse side, we've glued everything together usign [Parse Cloud Code][], similarly to Auth0 rules, it enabled us to write custom code, which was responsible for both extracting links from messages, as well as automatically extracting articles from these links using the [Readability Parser API][readability parser].
 
