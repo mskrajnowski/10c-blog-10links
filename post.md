@@ -34,7 +34,7 @@ Once logged in, the user can view the latest links gathered by our backend servi
 
 ## Results
 
-During the 10 hour event, we've managed to create the core of 10Links, even though we had no prior experience with pretty much any part of the stack.
+During the 10 hour event, we've managed to create a fully functional prototype of 10Links, even though we had no prior experience with pretty much any part of the stack.
 
 We've implemented fetching articles from our Slack channels and the mailing list, displaying them in a simple grid view as well as an article view with the markup extracted by Readability. We've also added a simple up/down vote for each article. 
 
