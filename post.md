@@ -28,7 +28,7 @@ Auth0 provided both a widget for logging users in - [Auth0 Lock][], as well as t
 
 ![Authentication flow](auth-flow.png)
 
-Once the user is in, he can view the latest links gathered by our backend services. The whole link extraction flow was built around Zapier, as it enabled us to easily create hooks that pulled data from our Slack and Google group and sent it to Parse. On the Parse side, we've glued everything together usign [Parse Cloud Code][], similarly to Auth0 rules, it enabled us to write custom code, which was responsible for both extracting links from messages, as well as automatically extracting articles from these links using the [Readability Parser API][readability parser].
+Once logged in, the user can view the latest links gathered by our backend services. The whole link extraction flow was built around Zapier, as it enabled us to easily create hooks that pulled data from our Slack and Google group and sent it to Parse. On the Parse side, we've glued everything together usign [Parse Cloud Code][], similarly to Auth0 rules, it enabled us to write custom code, which was responsible for both extracting links from messages, as well as automatically extracting articles from these links using the [Readability Parser API][readability parser].
 
 ![Pull link flow](pull-flow.png)
 
