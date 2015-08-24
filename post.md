@@ -18,7 +18,7 @@ Before the event we've researched available tools and selected:
 - [Readability API][] for article extraction
 - [Zapier][] for link extraction
 
-Finally, the web app was built using the [Aurelia framework][aurelia] and [Materialize CSS][], and hosted on [GitHub Pages][].
+We've also chosen [Aurelia][] and [Materialize CSS][] as the base for the web application and [GitHub Pages][] as the host.
 
 ## Gluing it all together
 
@@ -45,6 +45,8 @@ We've proven to ourselves that creating an application based purely on 3rd party
 Of course there's the issue of costs, each of the building blocks costs money to run in a production environment and it might very well be less expensive to simply roll out your own backend for the given features. In the case of 10Links we will probably replace the authentication flow provided by Auth0 with [a custom one based on Parse](https://parse.com/tutorials/adding-third-party-authentication-to-your-web-app), purely for that reason.
 
 Another issue is managing the glue code, custom code snippets running "in the cloud", such as Auth0 rules and Parse cloud code. As a developer you want to have all your code well organised in a VCS. It's not a great developer experience to push the code to the repository and then have to manually copy&paste a block of code to a given service. Parse makes this a bit better by providing a [CLI][parse cli] for deploying updates, so you could create a git hook, which would deploy the code automatically.
+
+Finally, I'd like to mention Aurelia, which we've used to create the frontend. We've only sampled what the framework has to offer, but from what we've seen it looks very promising. Coupled with ES6 it offers a very clean and simple API, a powerful and pluggable data-binding engine and a simple template syntax. However, that's a topic for a completely separate blog post.
 
 We plan on improving 10Links in the future, so it becomes the 10Clouds knowledge base with features like tagging, full-text search and article suggestions, personalized reading list, etc. We're also looking forward to open-sourcing the code as soon as possible.
 
