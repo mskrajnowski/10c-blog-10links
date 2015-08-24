@@ -46,7 +46,7 @@ Of course there's the issue of costs, each of the building blocks costs money to
 
 Another issue is managing the glue code, custom code snippets running "in the cloud", such as Auth0 rules and Parse cloud code. As a developer you want to have all your code well organised in a VCS. It's not a great developer experience to push the code to the repository and then have to manually copy&paste a block of code to a given service. Parse makes this a bit better by providing a [CLI][parse cli] for deploying updates, so you could create a git hook, which would deploy the code automatically.
 
-We plan on improving 10Links in the future, so it becomes the 10Clouds knowledge base with features like tagging, full-text search and article suggestions, personalized reading list, etc. We're also looking forward to open-sourcing the code base as soon as possible.
+We plan on improving 10Links in the future, so it becomes the 10Clouds knowledge base with features like tagging, full-text search and article suggestions, personalized reading list, etc. We're also looking forward to open-sourcing the code as soon as possible.
 
 [5th hackday post]: http://10clouds.com/blog/hackday-v-why-we-all-love-codefesting/
 [aurelia]: http://aurelia.io/
