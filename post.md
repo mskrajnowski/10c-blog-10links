@@ -34,11 +34,17 @@ Once the user is in, he can view the latest links gathered by our backend servic
 
 ![End result](result.png)
 
+During the event, we've managed to implement only the core of 10Links, that is fetching articles from our Slack channels and the mailing list, displaying them in a simple grid view as well as an article view with the markup extracted by Readability. We've also added a simple up/down vote for each article.
 
+However, we treat this as the start for building a very useful application with features like tagging, full-text search and article suggestions, personalized reading list, etc. We're also looking forward to open-sourcing the code base as soon as possible.
 
-## Future plans & Summary
-- tags
-- search
+## Final thoughts
+
+We've proven to ourselves that creating an application based purely on 3rd party backend services is possible, however, there are a few gotchas. 
+
+Of course there's the issue of costs, each of the building blocks costs money to run in a production environment and it might very well be less expensive to simply roll out your own backend for the given features. In the case of 10Links we will probably replace the authentication flow provided by Auth0 with [a custom one based on Parse](https://parse.com/tutorials/adding-third-party-authentication-to-your-web-app), purely for that reason.
+
+Another issue is managing the glue code, custom code snippets running "in the cloud", such as Auth0 rules and Parse cloud code. As a developer you want to have all your code well organised in a VCS. It's not a great developer experience to push the code to the repository and then have to manually copy&paste a block of code to a given service. Parse makes this a bit better by providing a [CLI][parse cli] for deploying updates, so you could create a git hook, which would deploy the code automatically.
 
 [5th hackday post]: http://10clouds.com/blog/hackday-v-why-we-all-love-codefesting/
 [aurelia]: http://aurelia.io/
@@ -48,6 +54,7 @@ Once the user is in, he can view the latest links gathered by our backend servic
 [google groups]: https://groups.google.com
 [materialize css]: http://materializecss.com/
 [parse]: https://parse.com/
+[parse cli]: https://parse.com/docs/js/guide#command-line
 [parse cloud code]: https://parse.com/docs/js/guide#cloud-code
 [readability api]: https://www.readability.com/developers/api/
 [readability parser]: https://www.readability.com/developers/api/parser
